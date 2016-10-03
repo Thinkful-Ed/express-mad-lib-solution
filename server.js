@@ -1,14 +1,12 @@
 'use strict';
 
-// Solution to Drill 1
-// ===================
+// Solution to Mad Libs drill 
+// ==========================
 
 const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
 
 const doMadlib = (params) => {
   const {adjective1, adjective2, adjective3, adverb, name, pronoun, noun, place} = params;
