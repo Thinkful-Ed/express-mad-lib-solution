@@ -18,8 +18,9 @@ const doMadlib = (params) => {
 };
 
 // GET requests to the root of the server
-app.get('/', (req, res) => res.send(doMadlib(req.query)).end());
+app.get('/', (req, res) => res.send(doMadlib(req.query)));
 
 
 // listen for requests :)
-app.listen(process.env.PORT, () => console.log(`Your app is listening on port ${process.env.PORT}`));
+app.listen(process.env.PORT || 8080, () => console.log(
+  `Your app is listening on port ${process.env.PORT || 8080}`));
