@@ -1,6 +1,6 @@
-Request and response drills
-===========================
+Express mad lib solution
+========================
+
+[GitHub](https://github.com/Thinkful-Ed/express-mad-lib-solution) | [Glitch](https://glitch.com/edit/#!/express-mad-lib-solution)
 
 Sample solution to Mad Libs drill from Thinkful's Node course.
-
-[GitHub repo](https://github.com/Thinkful-Ed/hyperdev-req-resp-drill-1__solution)

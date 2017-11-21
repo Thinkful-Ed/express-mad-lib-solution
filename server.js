@@ -3,21 +3,26 @@
 // Solution to Mad Libs drill 
 // ==========================
 
+//import express
 const express = require('express');
-const bodyParser = require('body-parser');
 
+//init a new express app
 const app = express();
 
 const doMadlib = (params) => {
-  const {adjective1, adjective2, adjective3, adverb, name, pronoun, noun, place} = params;
+  // we use destructuring to get the values for adjective1, adjective2, etc.
+  // from the request params
+  const {adjective1, adjective2, adjective3, adverb, name, noun, place} = params;
+  // then we return a string that substitutes in these values
   return (
-  `There's a ${adjective1} new ${name} in ${place} and ${pronoun} has everybody` +
+  `There's a ${adjective1} new ${name} in ${place} and everyone's ` +
   `talking. Stunningly ${adjective2} and ${adverb} ${adjective3}, all the cool kids know it.` + 
   `However, ${name} has a secret - ${name}'s a vile vampire. \n` + 
   `Will it end with a bite, or with a stake through the ${noun}?`);
 };
 
 // GET requests to the root of the server
+// Pass the request query as params for doMadlib
 app.get('/', (req, res) => res.send(doMadlib(req.query)));
 
 
